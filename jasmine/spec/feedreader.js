@@ -70,8 +70,8 @@ $(function() {
          */
         it('default hide menu is defined', function() {
             // css hides menu when menu-hidden and slide-menu are visible
-            var isHidden = $('.menu-hidden').is( ":hidden" );
-            expect(isHidden).toBe(false);
+            var isHidden = $('body').hasClass('menu-hidden');
+            expect(isHidden).toBeTruthy();
         });
 
          /* This is the fifth test - it ensures the menu changes
@@ -101,10 +101,9 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0,done);
         });
-        it('loadFeed function completes with a single entry in feed comtainer', function(done) {
-            var feedEntry = $('.feed .entry').html();
+        it('loadFeed function completes with a single entry in feed comtainer', function() {
+            var feedEntry = $('.feed > .entry').html();
             expect(feedEntry).not.toBe('');
-            done();
         });
     });
 
@@ -128,9 +127,9 @@ $(function() {
         it('loadFeed function changes content on feed', function(done) {
             loadFeed(1, function() {
                 newFeed = $('.feed').html();
+                expect(newFeed).not.toBe(oldFeed);
                 done();
             });
-            expect(newFeed).not.toBe(oldFeed);
         });
     });
 
