@@ -71,7 +71,7 @@ $(function() {
         it('default hide menu is defined', function() {
             // css hides menu when menu-hidden and slide-menu are visible
             var isHidden = $('body').hasClass('menu-hidden');
-            expect(isHidden).toBeTruthy();
+            expect(isHidden).toBe(true);
         });
 
          /* This is the fifth test - it ensures the menu changes
@@ -81,10 +81,10 @@ $(function() {
           */
         it('toggle shows/hides menu is defined', function() {
             $('.menu-icon-link').trigger( "click" );
-            var isVisible = $('.menu-hidden').is( ":visible" );
+            var isVisible = $('body').hasClass('menu-hidden');
             expect(isVisible).toBe(false);
             $('.menu-icon-link').trigger( "click" );
-            isVisible = $('.menu-hidden').is( ":visible" );
+            isVisible = $('body').hasClass('menu-hidden');
             expect(isVisible).toBe(true);
         });
     });
