@@ -4,7 +4,7 @@ Jasmine is a Javascript Testing Framework [Jasmine documentation](http://jasmine
 
 ## Getting Started
 
-1. Clone the files from [link to github!](https://github.com/ruben-socal/frontend-nanodegree-feedreader)
+1. Clone the files from github respository.
 2. Open directory where you want to copy the files in git bash and copy and paste the following: **git clone https://github.com/ruben-socal/frontend-nanodegree-feedreader.git**
 3. Change directory to **frontend-nanodegree-feedreader**
 4. Open index.html file by double clicking on it
