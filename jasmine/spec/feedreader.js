@@ -33,14 +33,12 @@ $(function() {
          */
         function checkURLs(feed) {
             it('allFeed url is defined', function() {
-                expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe('');
+                // This covers all truthiness, including url.length === 0 and url === undefined!
+                expect(feed.url).toBeTruthy();
             });
         }
 
-        allFeeds.forEach( function(feed) {
-            checkURLs(feed);
-        });
+        allFeeds.forEach(checkURLs);
 
 
         /* This is the third test - it loops through each feed
@@ -49,14 +47,11 @@ $(function() {
          */
          function checkNames(feed) {
             it('allFeed name is defined', function() {
-                expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe('');
+                expect(feed.name).toBeTruthy();
             });
         }
 
-        allFeeds.forEach( function(feed) {
-            checkNames(feed);
-        });
+        allFeeds.forEach(checkNames);
     });
 
 
@@ -80,10 +75,11 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it('toggle shows/hides menu is defined', function() {
-            $('.menu-icon-link').trigger( "click" );
+            // .click() is shorthand for .trigger('click')
+            $('.menu-icon-link').click();
             var isVisible = $('body').hasClass( "menu-hidden" );
             expect(isVisible).toBe(false);
-            $('.menu-icon-link').trigger( "click" );
+            $('.menu-icon-link').click();
             isVisible = $('body').hasClass( "menu-hidden" );
             expect(isVisible).toBe(true);
         });

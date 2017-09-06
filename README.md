@@ -4,14 +4,11 @@ Jasmine is a Javascript Testing Framework [Jasmine documentation](http://jasmine
 
 ## Getting Started
 
-1. Download the files from [link to github!](https://github.com/ruben-socal/frontend-nanodegree-feedreader)
-2. Once the link is open, click on green button that says **clone or dowwload**
-3. Once you click on the green button, choose **Download zip**
-4. Once the zip file has been downloaded, click on zip file and extract files. [extract files on windows](https://support.microsoft.com/en-us/help/14200/windows-compress-uncompress-zip-files), [extract files on a Mac](http://support.topspinmedia.com/hc/en-us/articles/204262713-How-to-extract-a-zip-file-on-a-Mac)
-2. Locate extracted files directory: **frontend-nanodegree-feedreader**
-3. Open index.html file by double clicking on it
-4. Once the index.html file is open its ready to use.
-5. The list of tests that have completed and passed can be seen at the bottom of the webpage.
+1. Clone the files from [link to github!](https://github.com/ruben-socal/frontend-nanodegree-feedreader)
+2. Open directory where you want to copy the files in git bash and copy and paste the following: **git clone https://github.com/ruben-socal/frontend-nanodegree-feedreader.git**
+3. Change directory to **frontend-nanodegree-feedreader**
+4. Open index.html file by double clicking on it
+5. Once the index.html file is open its ready to use, the list of tests that have completed and passed can be seen at the bottom of the webpage.
 
 ## RSS Feeds Suite
 1. Created test suite named `"RSS Feeds"`.
@@ -27,7 +24,7 @@ Jasmine is a Javascript Testing Framework [Jasmine documentation](http://jasmine
 6. Created test suite named `"Initial Entries"`.
 7. This test ensures when the `loadFeed` function is called and completes its work, there is at least a single `.entry` element within the `.feed` container.
 
-## New Feed Selection
+## New Feed Selection Suite
 8. Created test suite named `"New Feed Selection"`.
 9. This test ensures when a new feed is loaded by the `loadFeed` function that the content actually changes.
 
