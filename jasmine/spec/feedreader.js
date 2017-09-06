@@ -81,10 +81,10 @@ $(function() {
           */
         it('toggle shows/hides menu is defined', function() {
             $('.menu-icon-link').trigger( "click" );
-            var isVisible = $('body').hasClass('menu-hidden');
+            var isVisible = $('body').hasClass( "menu-hidden" );
             expect(isVisible).toBe(false);
             $('.menu-icon-link').trigger( "click" );
-            isVisible = $('body').hasClass('menu-hidden');
+            isVisible = $('body').hasClass( "menu-hidden" );
             expect(isVisible).toBe(true);
         });
     });
@@ -102,8 +102,8 @@ $(function() {
             loadFeed(0,done);
         });
         it('loadFeed function completes with a single entry in feed comtainer', function() {
-            var feedEntry = $('.feed > .entry').html();
-            expect(feedEntry).not.toBe('');
+            var feedEntry = $('.feed .entry').length;
+            expect(feedEntry).toBeGreaterThan(0);
         });
     });
 
